@@ -1,6 +1,6 @@
 # react-native-ax-chart
 
-React Native wrapper for iOS's accessible chart protocol [AXChart](https://developer.apple.com/documentation/accessibility/axchart)
+React Native wrapper for iOS's accessible chart protocol [`AXChart`](https://developer.apple.com/documentation/accessibility/axchart)
 
 ## Installation
 
@@ -13,13 +13,22 @@ pod install
 
 Introduced in iOS 15.0, the `AXChart` protocol allows you to "create an accessible representation of a chart — a view that displays a graphical representation of a data set — for VoiceOver to play as an audio graph."
 
-| Non-continuous                                                                | Continuous                                                                           |
-| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| ![The chart details modal of a non-continuous chart.](./docs/audio-graph.PNG) | ![The chart details modal of a continuous chart](./docs/audio-graph-continuous.jpeg) |
-
 While this package is compatible with iOS 11.0 and above, **the accessibility functionality is only available on devices running iOS 15.0 and above**.
 
+For more information on how `AXChart` works, check out the introductory WWDC video: <https://developer.apple.com/videos/play/wwdc2021/10122/>
+
+### Examples
+
+The following are examples of what this library will produce for two types of charts: a non-continuous bar chart and a continuous line graph.
+
+| Non-continuous                                                                    | Continuous                                                                                |
+| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| ![The chart details modal of a non-continuous bar chart.](./docs/audio-graph.PNG) | ![The chart details modal of a continuous line graph](./docs/audio-graph-continuous.jpeg) |
+
 ## Features
+
+> **Note**
+> This library (as it's currently written) is **best suited** for use with left-to-right bar charts and line graphs. Support for other charts will come in future versions.
 
 ### Supported
 
@@ -33,9 +42,7 @@ While this package is compatible with iOS 11.0 and above, **the accessibility fu
 
 ### Not Supported (yet!)
 
-The following are supported with the AXChart protocol, but have not been added to this library (yet!).
-
-Pull requests are welcome!
+The following are supported with the `AXChart` protocol, but have not been added to this library (yet!):
 
 - **Additional axes:** You _cannot_ define additional categorical or numerical axes beyond the x-axis and y-axis
 
@@ -45,7 +52,11 @@ Pull requests are welcome!
 
 - **Content direction:** You _cannot_ specify the direction of the content in the chart
 
+Pull requests are welcome! 🤗
+
 ## Usage
+
+For more information on all of the props, check out [the official `AXChartDescriptor` documentation](https://developer.apple.com/documentation/accessibility/axchartdescriptor).
 
 ```tsx
 import { AXChart, AXChartDescriptor } from 'react-native-ax-chart';
