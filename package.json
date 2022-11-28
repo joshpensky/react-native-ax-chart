@@ -1,6 +1,6 @@
 {
   "name": "react-native-ax-chart",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "React Native wrapper for iOS's accessible chart protocol AXChart",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
