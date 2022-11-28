@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E555C0D2413F4C50049A1A2 /* AxChart.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* AxChart.m */; };
-		F4FF95D7245B92E800C19C63 /*  AxChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  AxChart.swift */; };
+		F4FF95D7245B92E800C19C63 /* AxChartViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* AxChartViewManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,9 +24,9 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libAxChart.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAxChart.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3E7B5891CC2AC0600A0062D /* AxChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxChart.m; sourceTree = "<group>"; };
+		B3E7B5891CC2AC0600A0062D /* AxChartViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxChartViewManager.m; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* AxChart-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AxChart-Bridging-Header.h"; sourceTree = "<group>"; };
-		F4FF95D6245B92E800C19C63 /* AxChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AxChart.swift; sourceTree = "<group>"; };
+		F4FF95D6245B92E800C19C63 /* AxChartViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AxChartViewManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +51,8 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				F4FF95D6245B92E800C19C63 /* AxChart.swift */,
-				B3E7B5891CC2AC0600A0062D /* AxChart.m */,
+				F4FF95D6245B92E800C19C63 /* AxChartViewManager.swift */,
+				B3E7B5891CC2AC0600A0062D /* AxChartViewManager.m */,
 				F4FF95D5245B92E700C19C63 /* AxChart-Bridging-Header.h */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
@@ -116,8 +115,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4FF95D7245B92E800C19C63 /* AxChart.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* AxChart.m in Sources */,
+				F4FF95D7245B92E800C19C63 /* AxChartViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,7 @@
 {
   "name": "react-native-ax-chart",
   "version": "0.1.0",
-  "description": "test",
+  "description": "React Native wrapper for iOS's accessible chart protocol AXChart",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -39,7 +39,10 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "AXChart",
+    "accessibility",
+    "chart",
+    "audio"
   ],
   "repository": "https://github.com/joshpensky/react-native-ax-chart",
   "author": "Josh Pensky <joshuapensky@gmail.com> (https://github.com/joshpensky)",
