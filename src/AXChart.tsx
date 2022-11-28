@@ -60,13 +60,27 @@ const styles = StyleSheet.create({
 });
 
 export function AXChart({
+  // React Props
   children,
   style,
-  ...props
+  // AXChartDescriptor Props
+  title,
+  summary,
+  xAxis,
+  yAxis,
+  series,
 }: PropsWithChildren<AXChartProps>) {
   return (
     <View style={[styles.wrapper, style]}>
-      <NativeAxChartView style={styles.view} accessible {...props} />
+      <NativeAxChartView
+        style={styles.view}
+        accessible
+        title={title}
+        summary={summary}
+        xAxis={xAxis}
+        yAxis={yAxis}
+        series={series}
+      />
       {children}
     </View>
   );
