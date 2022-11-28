@@ -96,7 +96,7 @@ const descriptor: AXChartDescriptor = {
 return (
   <AXChart descriptor={descriptor}>
     <SeasonRatingsChart />
-  </AXChart>;
+  </AXChart>
 );
 ```
 
