@@ -3,8 +3,11 @@ import {
   UIManager,
   Platform,
   View,
+  StyleProp,
+  ViewStyle,
 } from 'react-native';
 import type { AXChartProps } from './AXChart';
+import type { AXChartDescriptor } from './AXChartDescriptor';
 
 const LINKING_ERROR =
   `The package 'react-native-ax-chart' doesn't seem to be linked. Make sure: \n\n` +
@@ -13,6 +16,11 @@ const LINKING_ERROR =
   '- You are not using Expo Go\n';
 
 const ComponentName = 'AxChartView';
+
+export interface NativeAxChartViewProps {
+  descriptor: AXChartDescriptor;
+  style?: StyleProp<ViewStyle>;
+}
 
 export const NativeAxChartView = Platform.select({
   ios:

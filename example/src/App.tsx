@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 import { StyleSheet, Text, View } from 'react-native';
-import { AXChart, AXChartProps } from 'src';
+import { AXChart, AXChartDescriptor } from 'src';
 
 export default function App() {
-  const chart: AXChartProps = {
+  const descriptor: AXChartDescriptor = {
     title: 'Season Ratings',
     summary:
       'This chart shows the average ratings of every season in the series.',
@@ -36,7 +36,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <AXChart style={styles.chart} {...chart}>
+      <AXChart descriptor={descriptor}>
         <Text>This is a placeholder chart.</Text>
       </AXChart>
     </View>
@@ -48,8 +48,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  chart: {
-    flex: 1,
   },
 });

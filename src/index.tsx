@@ -1,1 +1,2 @@
-export { AXChart, AXChartProps } from './AXChart';
+export { AXChart } from './AXChart';
+export { AXChartDescriptor } from './AXChartDescriptor';

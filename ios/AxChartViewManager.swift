@@ -19,22 +19,26 @@ class AxChartViewManager: RCTViewManager {
 
 @available(iOS 15.0, *)
 class AxChartView: UIView, AXChart {
-    @objc var title: NSString? = nil
-    @objc var summary: NSString? = nil
-    @objc var xAxis: NSDictionary = [:]
-    @objc var yAxis: NSDictionary? = nil
-    @objc var series: NSArray = []
+    @objc var descriptor: NSDictionary = [:]
     
     var accessibilityChartDescriptor: AXChartDescriptor? {
         get {
-            guard let xAxisTitle = xAxis["title"] as? String,
-                  let xAxisCategoryOrder = xAxis["categoryOrder"] as? [String] else {
+            let title = descriptor["title"] as? String
+            let summary = descriptor["summary"] as? String
+            let _yAxis = descriptor["yAxis"] as? NSDictionary
+            guard let _xAxis = descriptor["xAxis"] as? NSDictionary,
+                  let _series = descriptor["series"] as? NSArray else {
+                return nil
+            }
+            
+            guard let xAxisTitle = _xAxis["title"] as? String,
+                  let xAxisCategoryOrder = _xAxis["categoryOrder"] as? [String] else {
                 return nil
             }
             let xAxis = AXCategoricalDataAxisDescriptor(title: xAxisTitle, categoryOrder: xAxisCategoryOrder)
         
             var yAxis: AXNumericDataAxisDescriptor? = nil
-            if let yAxisDict = self.yAxis {
+            if let yAxisDict = _yAxis {
                 guard let yAxisTitle = yAxisDict["title"] as? String,
                       let yAxisLowerBound = yAxisDict["lowerBound"] as? Double,
                       let yAxisUpperBound = yAxisDict["upperBound"] as? Double,
@@ -58,7 +62,7 @@ class AxChartView: UIView, AXChart {
             }
         
             var series: [AXDataSeriesDescriptor] = []
-            self.series.forEach { element in
+            _series.forEach { element in
                 guard let dict = element as? NSDictionary,
                       let name = dict["name"] as? String,
                       let isContinuous = dict["isContinuous"] as? Bool,
